@@ -1,3 +1,5 @@
+import sys
+
 import streamlit as st
 import numpy as np
 import pickle
@@ -37,7 +39,7 @@ MAX_SEQUENCE_LEN = 10
 
 # User Input
 input_text = st.text_input("Enter your starting text:", placeholder="e.g., The cat sat on the...")
-
+st.write(sys.version)
 # Prediction Trigger
 if st.button("Predict"):
     if input_text.strip() == "":
